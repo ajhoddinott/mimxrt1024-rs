@@ -1,0 +1,290 @@
+#[doc = "Register `USBINTR` reader"]
+pub struct R(crate::R<USBINTR_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<USBINTR_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl From<crate::R<USBINTR_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<USBINTR_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Register `USBINTR` writer"]
+pub struct W(crate::W<USBINTR_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<USBINTR_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<USBINTR_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<USBINTR_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `UE` reader - USB Interrupt Enable When this bit is one and the UI bit in n_USBSTS register is a one the controller will issue an interrupt"]
+pub type UE_R = crate::BitReader<bool>;
+#[doc = "Field `UE` writer - USB Interrupt Enable When this bit is one and the UI bit in n_USBSTS register is a one the controller will issue an interrupt"]
+pub type UE_W<'a, const O: u8> = crate::BitWriter<'a, u32, USBINTR_SPEC, bool, O>;
+#[doc = "Field `UEE` reader - USB Error Interrupt Enable When this bit is one and the UEI bit in n_USBSTS register is a one the controller will issue an interrupt"]
+pub type UEE_R = crate::BitReader<bool>;
+#[doc = "Field `UEE` writer - USB Error Interrupt Enable When this bit is one and the UEI bit in n_USBSTS register is a one the controller will issue an interrupt"]
+pub type UEE_W<'a, const O: u8> = crate::BitWriter<'a, u32, USBINTR_SPEC, bool, O>;
+#[doc = "Field `PCE` reader - Port Change Detect Interrupt Enable When this bit is one and the PCI bit in n_USBSTS register is a one the controller will issue an interrupt"]
+pub type PCE_R = crate::BitReader<bool>;
+#[doc = "Field `PCE` writer - Port Change Detect Interrupt Enable When this bit is one and the PCI bit in n_USBSTS register is a one the controller will issue an interrupt"]
+pub type PCE_W<'a, const O: u8> = crate::BitWriter<'a, u32, USBINTR_SPEC, bool, O>;
+#[doc = "Field `FRE` reader - Frame List Rollover Interrupt Enable When this bit is one and the FRI bit in n_USBSTS register is a one the controller will issue an interrupt"]
+pub type FRE_R = crate::BitReader<bool>;
+#[doc = "Field `FRE` writer - Frame List Rollover Interrupt Enable When this bit is one and the FRI bit in n_USBSTS register is a one the controller will issue an interrupt"]
+pub type FRE_W<'a, const O: u8> = crate::BitWriter<'a, u32, USBINTR_SPEC, bool, O>;
+#[doc = "Field `SEE` reader - System Error Interrupt Enable When this bit is one and the SEI bit in n_USBSTS register is a one the controller will issue an interrupt"]
+pub type SEE_R = crate::BitReader<bool>;
+#[doc = "Field `SEE` writer - System Error Interrupt Enable When this bit is one and the SEI bit in n_USBSTS register is a one the controller will issue an interrupt"]
+pub type SEE_W<'a, const O: u8> = crate::BitWriter<'a, u32, USBINTR_SPEC, bool, O>;
+#[doc = "Field `AAE` reader - Async Advance Interrupt Enable When this bit is one and the AAI bit in n_USBSTS register is a one the controller will issue an interrupt"]
+pub type AAE_R = crate::BitReader<bool>;
+#[doc = "Field `AAE` writer - Async Advance Interrupt Enable When this bit is one and the AAI bit in n_USBSTS register is a one the controller will issue an interrupt"]
+pub type AAE_W<'a, const O: u8> = crate::BitWriter<'a, u32, USBINTR_SPEC, bool, O>;
+#[doc = "Field `URE` reader - USB Reset Interrupt Enable When this bit is one and the URI bit in n_USBSTS register is a one the controller will issue an interrupt"]
+pub type URE_R = crate::BitReader<bool>;
+#[doc = "Field `URE` writer - USB Reset Interrupt Enable When this bit is one and the URI bit in n_USBSTS register is a one the controller will issue an interrupt"]
+pub type URE_W<'a, const O: u8> = crate::BitWriter<'a, u32, USBINTR_SPEC, bool, O>;
+#[doc = "Field `SRE` reader - SOF Received Interrupt Enable When this bit is one and the SRI bit in n_USBSTS register is a one the controller will issue an interrupt"]
+pub type SRE_R = crate::BitReader<bool>;
+#[doc = "Field `SRE` writer - SOF Received Interrupt Enable When this bit is one and the SRI bit in n_USBSTS register is a one the controller will issue an interrupt"]
+pub type SRE_W<'a, const O: u8> = crate::BitWriter<'a, u32, USBINTR_SPEC, bool, O>;
+#[doc = "Field `SLE` reader - Sleep Interrupt Enable When this bit is one and the SLI bit in n_n_USBSTS register is a one the controller will issue an interrupt"]
+pub type SLE_R = crate::BitReader<bool>;
+#[doc = "Field `SLE` writer - Sleep Interrupt Enable When this bit is one and the SLI bit in n_n_USBSTS register is a one the controller will issue an interrupt"]
+pub type SLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, USBINTR_SPEC, bool, O>;
+#[doc = "Field `ULPIE` reader - ULPI Interrupt Enable When this bit is one and the UPLII bit in n_USBSTS register is a one the controller will issue an interrupt"]
+pub type ULPIE_R = crate::BitReader<bool>;
+#[doc = "Field `ULPIE` writer - ULPI Interrupt Enable When this bit is one and the UPLII bit in n_USBSTS register is a one the controller will issue an interrupt"]
+pub type ULPIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, USBINTR_SPEC, bool, O>;
+#[doc = "Field `NAKE` reader - NAK Interrupt Enable When this bit is one and the NAKI bit in n_USBSTS register is a one the controller will issue an interrupt"]
+pub type NAKE_R = crate::BitReader<bool>;
+#[doc = "Field `NAKE` writer - NAK Interrupt Enable When this bit is one and the NAKI bit in n_USBSTS register is a one the controller will issue an interrupt"]
+pub type NAKE_W<'a, const O: u8> = crate::BitWriter<'a, u32, USBINTR_SPEC, bool, O>;
+#[doc = "Field `UAIE` reader - USB Host Asynchronous Interrupt Enable When this bit is one, and the UAI bit in the n_USBSTS register is one, host controller will issue an interrupt at the next interrupt threshold"]
+pub type UAIE_R = crate::BitReader<bool>;
+#[doc = "Field `UAIE` writer - USB Host Asynchronous Interrupt Enable When this bit is one, and the UAI bit in the n_USBSTS register is one, host controller will issue an interrupt at the next interrupt threshold"]
+pub type UAIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, USBINTR_SPEC, bool, O>;
+#[doc = "Field `UPIE` reader - USB Host Periodic Interrupt Enable When this bit is one, and the UPI bit in the n_USBSTS register is one, host controller will issue an interrupt at the next interrupt threshold"]
+pub type UPIE_R = crate::BitReader<bool>;
+#[doc = "Field `UPIE` writer - USB Host Periodic Interrupt Enable When this bit is one, and the UPI bit in the n_USBSTS register is one, host controller will issue an interrupt at the next interrupt threshold"]
+pub type UPIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, USBINTR_SPEC, bool, O>;
+#[doc = "Field `TIE0` reader - General Purpose Timer #0 Interrupt Enable When this bit is one and the TI0 bit in n_USBSTS register is a one the controller will issue an interrupt"]
+pub type TIE0_R = crate::BitReader<bool>;
+#[doc = "Field `TIE0` writer - General Purpose Timer #0 Interrupt Enable When this bit is one and the TI0 bit in n_USBSTS register is a one the controller will issue an interrupt"]
+pub type TIE0_W<'a, const O: u8> = crate::BitWriter<'a, u32, USBINTR_SPEC, bool, O>;
+#[doc = "Field `TIE1` reader - General Purpose Timer #1 Interrupt Enable When this bit is one and the TI1 bit in n_USBSTS register is a one the controller will issue an interrupt"]
+pub type TIE1_R = crate::BitReader<bool>;
+#[doc = "Field `TIE1` writer - General Purpose Timer #1 Interrupt Enable When this bit is one and the TI1 bit in n_USBSTS register is a one the controller will issue an interrupt"]
+pub type TIE1_W<'a, const O: u8> = crate::BitWriter<'a, u32, USBINTR_SPEC, bool, O>;
+impl R {
+    #[doc = "Bit 0 - USB Interrupt Enable When this bit is one and the UI bit in n_USBSTS register is a one the controller will issue an interrupt"]
+    #[inline(always)]
+    pub fn ue(&self) -> UE_R {
+        UE_R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - USB Error Interrupt Enable When this bit is one and the UEI bit in n_USBSTS register is a one the controller will issue an interrupt"]
+    #[inline(always)]
+    pub fn uee(&self) -> UEE_R {
+        UEE_R::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - Port Change Detect Interrupt Enable When this bit is one and the PCI bit in n_USBSTS register is a one the controller will issue an interrupt"]
+    #[inline(always)]
+    pub fn pce(&self) -> PCE_R {
+        PCE_R::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - Frame List Rollover Interrupt Enable When this bit is one and the FRI bit in n_USBSTS register is a one the controller will issue an interrupt"]
+    #[inline(always)]
+    pub fn fre(&self) -> FRE_R {
+        FRE_R::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - System Error Interrupt Enable When this bit is one and the SEI bit in n_USBSTS register is a one the controller will issue an interrupt"]
+    #[inline(always)]
+    pub fn see(&self) -> SEE_R {
+        SEE_R::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - Async Advance Interrupt Enable When this bit is one and the AAI bit in n_USBSTS register is a one the controller will issue an interrupt"]
+    #[inline(always)]
+    pub fn aae(&self) -> AAE_R {
+        AAE_R::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 6 - USB Reset Interrupt Enable When this bit is one and the URI bit in n_USBSTS register is a one the controller will issue an interrupt"]
+    #[inline(always)]
+    pub fn ure(&self) -> URE_R {
+        URE_R::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - SOF Received Interrupt Enable When this bit is one and the SRI bit in n_USBSTS register is a one the controller will issue an interrupt"]
+    #[inline(always)]
+    pub fn sre(&self) -> SRE_R {
+        SRE_R::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "Bit 8 - Sleep Interrupt Enable When this bit is one and the SLI bit in n_n_USBSTS register is a one the controller will issue an interrupt"]
+    #[inline(always)]
+    pub fn sle(&self) -> SLE_R {
+        SLE_R::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 10 - ULPI Interrupt Enable When this bit is one and the UPLII bit in n_USBSTS register is a one the controller will issue an interrupt"]
+    #[inline(always)]
+    pub fn ulpie(&self) -> ULPIE_R {
+        ULPIE_R::new(((self.bits >> 10) & 1) != 0)
+    }
+    #[doc = "Bit 16 - NAK Interrupt Enable When this bit is one and the NAKI bit in n_USBSTS register is a one the controller will issue an interrupt"]
+    #[inline(always)]
+    pub fn nake(&self) -> NAKE_R {
+        NAKE_R::new(((self.bits >> 16) & 1) != 0)
+    }
+    #[doc = "Bit 18 - USB Host Asynchronous Interrupt Enable When this bit is one, and the UAI bit in the n_USBSTS register is one, host controller will issue an interrupt at the next interrupt threshold"]
+    #[inline(always)]
+    pub fn uaie(&self) -> UAIE_R {
+        UAIE_R::new(((self.bits >> 18) & 1) != 0)
+    }
+    #[doc = "Bit 19 - USB Host Periodic Interrupt Enable When this bit is one, and the UPI bit in the n_USBSTS register is one, host controller will issue an interrupt at the next interrupt threshold"]
+    #[inline(always)]
+    pub fn upie(&self) -> UPIE_R {
+        UPIE_R::new(((self.bits >> 19) & 1) != 0)
+    }
+    #[doc = "Bit 24 - General Purpose Timer #0 Interrupt Enable When this bit is one and the TI0 bit in n_USBSTS register is a one the controller will issue an interrupt"]
+    #[inline(always)]
+    pub fn tie0(&self) -> TIE0_R {
+        TIE0_R::new(((self.bits >> 24) & 1) != 0)
+    }
+    #[doc = "Bit 25 - General Purpose Timer #1 Interrupt Enable When this bit is one and the TI1 bit in n_USBSTS register is a one the controller will issue an interrupt"]
+    #[inline(always)]
+    pub fn tie1(&self) -> TIE1_R {
+        TIE1_R::new(((self.bits >> 25) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - USB Interrupt Enable When this bit is one and the UI bit in n_USBSTS register is a one the controller will issue an interrupt"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ue(&mut self) -> UE_W<0> {
+        UE_W::new(self)
+    }
+    #[doc = "Bit 1 - USB Error Interrupt Enable When this bit is one and the UEI bit in n_USBSTS register is a one the controller will issue an interrupt"]
+    #[inline(always)]
+    #[must_use]
+    pub fn uee(&mut self) -> UEE_W<1> {
+        UEE_W::new(self)
+    }
+    #[doc = "Bit 2 - Port Change Detect Interrupt Enable When this bit is one and the PCI bit in n_USBSTS register is a one the controller will issue an interrupt"]
+    #[inline(always)]
+    #[must_use]
+    pub fn pce(&mut self) -> PCE_W<2> {
+        PCE_W::new(self)
+    }
+    #[doc = "Bit 3 - Frame List Rollover Interrupt Enable When this bit is one and the FRI bit in n_USBSTS register is a one the controller will issue an interrupt"]
+    #[inline(always)]
+    #[must_use]
+    pub fn fre(&mut self) -> FRE_W<3> {
+        FRE_W::new(self)
+    }
+    #[doc = "Bit 4 - System Error Interrupt Enable When this bit is one and the SEI bit in n_USBSTS register is a one the controller will issue an interrupt"]
+    #[inline(always)]
+    #[must_use]
+    pub fn see(&mut self) -> SEE_W<4> {
+        SEE_W::new(self)
+    }
+    #[doc = "Bit 5 - Async Advance Interrupt Enable When this bit is one and the AAI bit in n_USBSTS register is a one the controller will issue an interrupt"]
+    #[inline(always)]
+    #[must_use]
+    pub fn aae(&mut self) -> AAE_W<5> {
+        AAE_W::new(self)
+    }
+    #[doc = "Bit 6 - USB Reset Interrupt Enable When this bit is one and the URI bit in n_USBSTS register is a one the controller will issue an interrupt"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ure(&mut self) -> URE_W<6> {
+        URE_W::new(self)
+    }
+    #[doc = "Bit 7 - SOF Received Interrupt Enable When this bit is one and the SRI bit in n_USBSTS register is a one the controller will issue an interrupt"]
+    #[inline(always)]
+    #[must_use]
+    pub fn sre(&mut self) -> SRE_W<7> {
+        SRE_W::new(self)
+    }
+    #[doc = "Bit 8 - Sleep Interrupt Enable When this bit is one and the SLI bit in n_n_USBSTS register is a one the controller will issue an interrupt"]
+    #[inline(always)]
+    #[must_use]
+    pub fn sle(&mut self) -> SLE_W<8> {
+        SLE_W::new(self)
+    }
+    #[doc = "Bit 10 - ULPI Interrupt Enable When this bit is one and the UPLII bit in n_USBSTS register is a one the controller will issue an interrupt"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ulpie(&mut self) -> ULPIE_W<10> {
+        ULPIE_W::new(self)
+    }
+    #[doc = "Bit 16 - NAK Interrupt Enable When this bit is one and the NAKI bit in n_USBSTS register is a one the controller will issue an interrupt"]
+    #[inline(always)]
+    #[must_use]
+    pub fn nake(&mut self) -> NAKE_W<16> {
+        NAKE_W::new(self)
+    }
+    #[doc = "Bit 18 - USB Host Asynchronous Interrupt Enable When this bit is one, and the UAI bit in the n_USBSTS register is one, host controller will issue an interrupt at the next interrupt threshold"]
+    #[inline(always)]
+    #[must_use]
+    pub fn uaie(&mut self) -> UAIE_W<18> {
+        UAIE_W::new(self)
+    }
+    #[doc = "Bit 19 - USB Host Periodic Interrupt Enable When this bit is one, and the UPI bit in the n_USBSTS register is one, host controller will issue an interrupt at the next interrupt threshold"]
+    #[inline(always)]
+    #[must_use]
+    pub fn upie(&mut self) -> UPIE_W<19> {
+        UPIE_W::new(self)
+    }
+    #[doc = "Bit 24 - General Purpose Timer #0 Interrupt Enable When this bit is one and the TI0 bit in n_USBSTS register is a one the controller will issue an interrupt"]
+    #[inline(always)]
+    #[must_use]
+    pub fn tie0(&mut self) -> TIE0_W<24> {
+        TIE0_W::new(self)
+    }
+    #[doc = "Bit 25 - General Purpose Timer #1 Interrupt Enable When this bit is one and the TI1 bit in n_USBSTS register is a one the controller will issue an interrupt"]
+    #[inline(always)]
+    #[must_use]
+    pub fn tie1(&mut self) -> TIE1_W<25> {
+        TIE1_W::new(self)
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Interrupt Enable Register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [usbintr](index.html) module"]
+pub struct USBINTR_SPEC;
+impl crate::RegisterSpec for USBINTR_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [usbintr::R](R) reader structure"]
+impl crate::Readable for USBINTR_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [usbintr::W](W) writer structure"]
+impl crate::Writable for USBINTR_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets USBINTR to value 0"]
+impl crate::Resettable for USBINTR_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
+}
